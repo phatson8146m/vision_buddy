@@ -1,0 +1,33 @@
+name: ai_depth_object_app
+description: "A new Flutter project."
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.7.2
+
+dependencies:
+  flutter:
+    sdk: flutter
+  cupertino_icons: ^1.0.8
+  camera: ^0.11.2          # ✅ รุ่นใหม่ มี namespace ตรงกับ AGP ปัจจุบัน
+  tflite_flutter: ^0.11.0  # ✅ ใช้คู่กับ image 4.x ได้ดี
+  image: ^4.5.4            # ✅ เวอร์ชันล่าสุดสาย 4.x
+  flutter_isolate: ^2.0.1
+  flutter_tts: ^4.0.2
+  
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^5.0.0
+  rename: ^3.1.0
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/models/detect.tflite
+    - assets/models/labelmap.txt
+    - assets/models/model_opt.tflite
+    - assets/models/1.tflite
+    - assets/models/labels.txt
